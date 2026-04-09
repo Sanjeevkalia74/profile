@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjeev Kalia – Executive CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0d1b2a;
+    --teal: #1a7a6e;
+    --gold: #c9a84c;
+    --light: #f4f1ec;
+    --mid: #e8e3d9;
+    --text: #2c2c2c;
+    --muted: #6b6b6b;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: #eee9e1; color: var(--text); }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { background: #fff; }
+    .cv-wrapper { padding: 0; max-width: 100%; }
+    .cv-header, .stat-strip, .ai-strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* CONTROLS */
+  .controls {
+    background: var(--navy); padding: 12px 32px;
+    display: flex; align-items: center; gap: 12px;
+    position: sticky; top: 0; z-index: 100; flex-wrap: wrap;
+  }
+  .controls-label { color: #8da3b4; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
+  .tab-btn {
+    background: transparent; border: 1px solid rgba(255,255,255,0.15);
+    color: #ccd6e0; padding: 6px 16px; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+  .print-btn {
+    background: transparent; border: 1px solid rgba(201,168,76,0.5);
+    color: var(--gold); padding: 6px 14px; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.2s;
+  }
+  .print-btn:hover { background: var(--gold); color: var(--navy); }
+  .copy-btn {
+    margin-left: auto; background: var(--gold); border: none; color: var(--navy);
+    padding: 7px 18px; border-radius: 4px; font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+  .copy-btn:hover { opacity: 0.85; }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* WRAPPER */
+  .cv-wrapper { max-width: 880px; margin: 0 auto; padding: 32px 16px 60px; }
+
+  /* HEADER */
+  .cv-header {
+    background: var(--navy); color: #fff; padding: 40px 48px;
+    position: relative; overflow: hidden;
+  }
+  .cv-header::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 300px; height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(26,122,110,0.15));
+    pointer-events: none;
+  }
+  .cv-header::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--teal));
+  }
+  .name { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; letter-spacing: -0.5px; }
+  .name span { color: var(--gold); }
+  .title-bar { margin-top: 8px; font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: #8da3b4; font-weight: 500; }
+  .contact-row { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 14px; }
+  .contact-item { font-size: 12.5px; color: #c5d5e0; }
+  .contact-item a { color: var(--gold); text-decoration: none; }
+  .contact-item a:hover { text-decoration: underline; }
+
+  /* AI STRIP */
+  .ai-strip {
+    background: #0a2218; padding: 10px 48px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  .ai-strip-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+  .ai-pill {
+    background: rgba(26,122,110,0.35); border: 1px solid rgba(26,122,110,0.55);
+    color: #9dd4cc; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500;
+  }
+
+  /* STATS */
+  .stat-strip { background: var(--teal); display: flex; flex-wrap: wrap; }
+  .stat-item { flex: 1; min-width: 110px; padding: 16px 20px; border-right: 1px solid rgba(255,255,255,0.15); text-align: center; }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; }
+  .stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 3px; }
+
+  /* BODY */
+  .cv-body { background: #fff; padding: 40px 48px; }
+  .section { margin-bottom: 30px; }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700;
+    color: var(--navy); text-transform: uppercase; letter-spacing: 2px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--gold); margin-bottom: 20px;
+  }
+
+  /* SUMMARY */
+  .summary-text { font-size: 13.5px; line-height: 1.85; color: #3c3c3c; border-left: 3px solid var(--gold); padding-left: 16px; }
+
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .skill-cluster { background: var(--light); border-radius: 6px; padding: 14px 18px; border-top: 2px solid var(--teal); }
+  .skill-cluster-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .skill-tag { display: block; font-size: 12px; line-height: 1.85; color: var(--text); }
+  .skill-tag::before { content: '· '; color: var(--gold); font-weight: bold; }
+
+  /* EXPERIENCE */
+  .exp-item { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid var(--mid); }
+  .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+  .exp-role { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--navy); }
+  .exp-period { background: var(--navy); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 3px; white-space: nowrap; }
+  .exp-company { font-size: 11.5px; font-weight: 600; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 5px; }
+  .exp-context { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 10px; line-height: 1.6; }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li { font-size: 13px; line-height: 1.75; color: #3a3a3a; padding: 2px 0 2px 18px; position: relative; }
+  .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 5px; }
+  .exp-bullets li strong { color: var(--navy); font-weight: 600; }
+
+  /* AI CALLOUT */
+  .ai-callout {
+    margin-top: 12px; background: linear-gradient(135deg, #0d1b2a, #0a2218);
+    border: 1px solid rgba(201,168,76,0.4); border-radius: 6px; padding: 14px 18px;
+  }
+  .ai-callout-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .ai-callout-text { font-size: 12px; line-height: 1.7; color: #b8cfd8; }
+  .ai-callout-text strong { color: #fff; }
+  .ai-product { margin-top: 8px; padding-left: 10px; border-left: 2px solid rgba(26,122,110,0.6); }
+
+  /* EDU */
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .edu-item { background: var(--light); padding: 12px 16px; border-radius: 4px; border-left: 3px solid var(--teal); }
+  .edu-degree { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .edu-inst { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .edu-year { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 1px; margin-top: 4px; }
+  .cert-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .cert-tag { background: var(--navy); color: #c5d5e0; font-size: 10.5px; font-weight: 500; padding: 5px 12px; border-radius: 3px; }
+
+  /* FOOTER */
+  .cv-footer {
+    background: var(--navy); padding: 16px 48px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+  }
+  .cv-footer span { font-size: 11px; color: #4a6070; }
+  .cv-footer a { color: var(--gold); text-decoration: none; font-size: 11px; }
+
+  /* CHANGES PAGE */
+  .changes-body { background: #fff; padding: 36px 44px; }
+  .changes-body h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); margin-bottom: 4px; }
+  .changes-body table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-bottom: 28px; }
+  .changes-body th { padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--gold); }
+  .changes-body td { padding: 9px 14px; border-bottom: 1px solid var(--mid); }
+
+  @media (max-width: 640px) {
+    .cv-header, .cv-body, .ai-strip, .cv-footer, .changes-body { padding-left: 20px; padding-right: 20px; }
+    .name { font-size: 26px; }
+    .skills-grid, .edu-grid { grid-template-columns: 1fr; }
+    .controls { padding: 10px 16px; }
+    .copy-btn { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CONTROLS -->
+<div class="controls no-print">
+  <span class="controls-label">View</span>
+  <button class="tab-btn active" onclick="showPage('cv', this)">📄 CV</button>
+  <button class="tab-btn" onclick="showPage('changes', this)">📊 Changes Log</button>
+  <button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button>
+  <button class="copy-btn" onclick="copyText()">⬇ Copy Plain Text</button>
+</div>
+
+<!-- ══════════════════════════════════
+     CV PAGE
+══════════════════════════════════ -->
+<div class="page active" id="page-cv">
+<div class="cv-wrapper">
+
+  <div class="cv-header">
+    <div class="name">SANJEEV <span>KALIA</span></div>
+    <div class="title-bar">Business Transformation &nbsp;·&nbsp; Digital Strategy &nbsp;·&nbsp; AI Product Builder &nbsp;·&nbsp; P&amp;L Leadership &nbsp;·&nbsp; C-Suite Executive</div>
+    <div class="contact-row">
+      <div class="contact-item">📧 <a href="mailto:skaliaomen@outlook.com">skaliaomen@outlook.com</a></div>
+      <div class="contact-item">📱 +91 98114 20446</div>
+      <div class="contact-item">📍 Faridabad, Haryana, India</div>
+      <div class="contact-item">🔗 <a href="https://linkedin.com/in/sanjivkalia/" target="_blank">linkedin.com/in/sanjivkalia</a></div>
+      <div class="contact-item">🏅 <a href="https://www.credly.com/users/sanjeevkalia" target="_blank">credly.com/users/sanjeevkalia</a></div>
+    </div>
+  </div>
+
+  <div class="ai-strip">
+    <span class="ai-strip-label">🤖 AI Products Built</span>
+    <span class="ai-pill">Anthropic Claude (Agentic AI)</span>
+    <span class="ai-pill">CrewAI Multi-Agent Framework</span>
+    <span class="ai-pill">HRMS AI Agent</span>
+    <span class="ai-pill">Booklinq — Global Hotel Booking AI (Launch-Ready)</span>
+  </div>
+
+  <div class="stat-strip">
+    <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Years Led</div></div>
+    <div class="stat-item"><div class="stat-num">&#8377;8B+</div><div class="stat-label">Revenue Impact</div></div>
+    <div class="stat-item"><div class="stat-num">$2.4M</div><div class="stat-label">2026 Pipeline</div></div>
+    <div class="stat-item"><div class="stat-num">150+</div><div class="stat-label">Brands Served</div></div>
+    <div class="stat-item"><div class="stat-num">600+</div><div class="stat-label">Professionals Mentored</div></div>
+    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">AI Products Built</div></div>
+  </div>
+
+  <div class="cv-body">
+
+    <div class="section">
+      <div class="section-title">Executive Summary</div>
+      <div class="summary-text">
+        A results-driven C-suite executive and hands-on AI product builder with 30 years of cross-industry leadership spanning media, technology, SaaS, digital transformation, and startup ecosystems. Generated over &#8377;8 billion in cumulative revenue across B2B, B2C, and D2C organisations — scaling businesses from zero to profitability across media, digital, and cloud sectors. One of India's earliest digital advertising practitioners, having established Yahoo! India's North and East operations in 1998 — among the first to deploy SEM and programmatic sales commercially in India. Currently building two globally disruptive AI-powered products — an HRMS Agent and Booklinq (hotel booking platform) — independently developed using Anthropic's Claude and the CrewAI multi-agent framework. Recognised for translating complex strategy into measurable commercial outcomes, leading 80+ member teams, and mentoring 600+ professionals into leadership careers.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Core Competencies</div>
+      <div class="skills-grid">
+        <div class="skill-cluster">
+          <div class="skill-cluster-title">&#127963; Leadership &amp; Operations</div>
+          <span class="skill-tag">C-Suite P&amp;L Ownership &amp; Budget Management</span>
+          <span class="skill-tag">Business Transformation &amp; Change Management</span>
+          <span class="skill-tag">Cross-functional Team Building (80+ members)</span>
+          <span class="skill-tag">Startup Scaling &amp; Venture Strategy</span>
+          <span class="skill-tag">Investor Relations &amp; Board Communication</span>
+          <span class="skill-tag">OKR &amp; Performance Frameworks</span>
+        </div>
+        <div class="skill-cluster">
+          <div class="skill-cluster-title">&#129504; AI Strategy &amp; Product</div>
+          <span class="skill-tag">Agentic AI Design (Anthropic Claude)</span>
+          <span class="skill-tag">Multi-Agent Systems (CrewAI Framework)</span>
+          <span class="skill-tag">AI Product Management &amp; Roadmapping</span>
+          <span class="skill-tag">Generative AI Workflow Automation</span>
+          <span class="skill-tag">Web 3.0 &amp; Emerging Technology Strategy</span>
+          <span class="skill-tag">SaaS Product Development &amp; GTM</span>
+        </div>
+        <div class="skill-cluster">
+          <div class="skill-cluster-title">&#128202; Commercial &amp; Revenue Growth</div>
+          <span class="skill-tag">Revenue Acceleration &amp; GTM Strategy</span>
+          <span class="skill-tag">Global Market Entry (UAE, USA, Canada, SA)</span>
+          <span class="skill-tag">SaaS Enterprise Sales &amp; Account Development</span>
+          <span class="skill-tag">Programmatic Advertising &amp; AdTech</span>
+          <span class="skill-tag">Strategic Alliances &amp; Partnership Building</span>
+          <span class="skill-tag">E-commerce &amp; D2C Growth Strategy</span>
+        </div>
+        <div class="skill-cluster">
+          <div class="skill-cluster-title">&#127919; Brand, Digital &amp; Content</div>
+          <span class="skill-tag">Brand Architecture &amp; Repositioning</span>
+          <span class="skill-tag">SEO, SEM &amp; Performance Marketing</span>
+          <span class="skill-tag">Omni-channel &amp; Content Strategy</span>
+          <span class="skill-tag">UI/UX Strategy &amp; Digital Product Design</span>
+          <span class="skill-tag">PR, ORM &amp; Media Relations</span>
+          <span class="skill-tag">Media Buying &amp; Planning</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <!-- INNOBLES -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Chief Marketing Officer &amp; Chief Growth Officer</div>
+          <div class="exp-period">JAN 2024 – PRESENT</div>
+        </div>
+        <div class="exp-company">Innobles (Cloud ERP / SaaS) &nbsp;·&nbsp; Axia Health Services</div>
+        <div class="exp-context">Full commercial ownership of a cloud ERP firm's global revenue engine, managing a &#8377;1.5 Crore (~$180K) annual marketing budget and leading enterprise expansion into 4 international markets. Concurrent brand portfolio leadership for a healthcare services group.</div>
+        <ul class="exp-bullets">
+          <li>Grew annual sales from <strong>&#8377;10 Crore (~$1.2M) to &#8377;16 Crore (~$1.93M) in 12 months</strong> — a 60% YoY increase — by redesigning the GTM strategy and integrating AI-driven B2B outreach and account-based marketing.</li>
+          <li>Built and qualified a <strong>forward pipeline of &#8377;20 Crore (~$2.4M) for 2026</strong> through systematic account development, partner channel activation, and referral network expansion.</li>
+          <li>Managed a marketing budget of <strong>&#8377;1.5 Crore (~$180K)</strong>, achieving an <strong>8x return on spend</strong> (up from 3x at tenure start) through rigorous campaign performance optimisation.</li>
+          <li>Executed international market entry across <strong>UAE, USA, Canada, and South Africa</strong>, establishing regional partner relationships and generating qualified enterprise leads within the first two quarters.</li>
+          <li>Built and led a cross-functional team of <strong>20 professionals</strong> — implementing OKR frameworks that improved delivery velocity by 35% quarter-on-quarter.</li>
+          <li>Designed and launched the full brand identity for Axia Health Services, resulting in measurable client acquisition uplift among tier-1 healthcare organisations in India.</li>
+        </ul>
+        <div class="ai-callout">
+          <div class="ai-callout-title">&#129504; AI Products Independently Built (Alongside This Role)</div>
+          <div class="ai-callout-text">
+            Using <strong>Anthropic Claude</strong> and the <strong>CrewAI multi-agent framework</strong>, independently architected two globally disruptive AI software products:
+            <div class="ai-product"><strong>&#9312; HRMS AI Agent</strong> — An agentic AI system automating end-to-end HR workflows (recruitment, onboarding, payroll intelligence, performance analytics) — replacing legacy HRMS platforms with an adaptive conversational AI layer that significantly reduces HR operational overhead for mid-to-large enterprises.</div>
+            <div class="ai-product"><strong>&#9313; Booklinq</strong> — An AI-powered global hotel booking platform using autonomous agents for dynamic pricing, inventory management, and hyper-personalised travel recommendations. <strong>Launch-ready for global deployment.</strong> Targets the $600B+ global travel booking market, positioned to disrupt incumbent OTA platforms through agentic AI differentiation.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSIDESPORT -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Chief Executive Officer</div>
+          <div class="exp-period">JAN 2023 – DEC 2023</div>
+        </div>
+        <div class="exp-company">InsideSport.in &nbsp;·&nbsp; Better Collective A/S (NASDAQ Copenhagen: BECO)</div>
+        <div class="exp-context">Recruited post-acquisition by Better Collective — a globally listed sports media group — to lead InsideSport.in's full transformation, with complete P&amp;L responsibility.</div>
+        <ul class="exp-bullets">
+          <li>Scaled global monthly traffic from <strong>10 million to 16 million unique visitors (+60%)</strong> within 12 months through editorial restructure, SEO overhaul, and partnerships expanding reach by 20x.</li>
+          <li>Doubled annual revenue from <strong>&#8377;4 Crore (~$481K) to &#8377;8 Crore (~$963K)</strong> in 12 months through programmatic expansion and an Advertiser Funded Content (AFC) monetisation model.</li>
+          <li>Reduced bounce rate by <strong>30 percentage points</strong> and grew average session time <strong>15x within 60 days</strong> via full UI/UX redesign.</li>
+          <li>Deployed Ad Exchange with SSP integration: <strong>AdSense CPMs grew 40x; SSP revenues grew 50x</strong> vs. pre-tenure baselines.</li>
+          <li>Reduced high-performer attrition by <strong>40% in 12 months</strong> through restructured incentive and progression frameworks.</li>
+        </ul>
+      </div>
+
+      <!-- UINCEPT -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Chief Marketing Officer &amp; Startup Mentor</div>
+          <div class="exp-period">FEB 2020 – NOV 2022</div>
+        </div>
+        <div class="exp-company">UIncept Accelerator &nbsp;·&nbsp; JIMS Management Institutes</div>
+        <div class="exp-context">Senior leadership at one of India's most active EdTech accelerators, while concurrently directing brand transformation for a leading management institution in Delhi.</div>
+        <ul class="exp-bullets">
+          <li>Elevated UIncept to a <strong>Top 50 Global Accelerator</strong> ranking, attracting cross-border investor attention and international deal flow.</li>
+          <li>Mentored <strong>90+ EdTech startups</strong>; directly guided <strong>12 portfolio companies to Series B and C funding rounds</strong>.</li>
+          <li>Led JIMS brand repositioning, increasing application volumes by an estimated <strong>25%</strong> through digital-first, youth-oriented communications.</li>
+          <li>Represented UIncept at <strong>international forums across 5+ countries</strong>, building a global EdTech partnership ecosystem.</li>
+        </ul>
+      </div>
+
+      <!-- OYE GROUP -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Founder, CEO &amp; Chief Strategy Officer</div>
+          <div class="exp-period">NOV 2010 – JAN 2020</div>
+        </div>
+        <div class="exp-company">OYE Group — Digital &amp; Creative Boutique Agency (Self-Founded)</div>
+        <div class="exp-context">Built a full-service digital and creative agency from founding to &#8377;8 Crore (~$963K) peak annual revenue over a decade.</div>
+        <ul class="exp-bullets">
+          <li>Grew from zero to <strong>&#8377;8 Crore (~$963K) peak annual revenue</strong>; recognised as <strong>India's Leading Digital &amp; Creative Boutique Agency</strong>.</li>
+          <li>Led a team of <strong>80 professionals</strong>; maintained 90%+ client retention across 90+ accounts.</li>
+          <li>Delivered <strong>100+ large-scale events</strong> for marquee brands in media, fashion, automotive, and lifestyle sectors.</li>
+          <li>Developed a proprietary SEO &amp; content framework across client accounts, reducing average cost-per-acquisition by ~30%.</li>
+          <li>Built strategic brand partnerships in <strong>Education, E-commerce, FMCG, and Lifestyle</strong> verticals, generating multi-year retainer relationships.</li>
+        </ul>
+      </div>
+
+      <!-- BAG FILMS -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">President – Sales &amp; Marketing</div>
+          <div class="exp-period">2007 – 2010</div>
+        </div>
+        <div class="exp-company">BAG Films &amp; Media Ltd &nbsp;·&nbsp; News24 &nbsp;·&nbsp; E24 (Bollywood News) &nbsp;·&nbsp; 10 FM Radio</div>
+        <ul class="exp-bullets">
+          <li>Achieved <strong>&#8377;600 million in cumulative revenue</strong>; drove all three brands to operational breakeven by Year 3.</li>
+          <li>Elevated News24 from <strong>9th to 5th in Hindi News genre</strong> within 15 months of the channel's national launch.</li>
+          <li>Led integrated cross-functional teams of 60+ across content, strategy, operations, and marketing for three concurrent media products.</li>
+        </ul>
+      </div>
+
+      <!-- ZOOM TV -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Regional Head (AVP) – Revenue &amp; Events, North &amp; East India</div>
+          <div class="exp-period">2004 – 2007</div>
+        </div>
+        <div class="exp-company">The Times Group &nbsp;·&nbsp; Zoom TV (Premium Lifestyle Entertainment)</div>
+        <ul class="exp-bullets">
+          <li>Delivered <strong>4x revenue growth within 6 months</strong> of Zoom TV's national launch.</li>
+          <li>Generated <strong>50% of national revenue</strong> from North &amp; East — outperforming Mumbai HQ market by contribution within the launch year.</li>
+          <li>Pioneered Advertiser-Funded Programs (AFPs) with Nokia, Pepsi, Hero Honda, and Mastercard — replicated across Times Network.</li>
+          <li>Won <strong>multiple Chairman's Awards</strong> for highest sales performance in consecutive quarters.</li>
+        </ul>
+      </div>
+
+      <!-- SONY -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Head of Sales &amp; Content Strategy – English Channels</div>
+          <div class="exp-period">2002 – 2004</div>
+        </div>
+        <div class="exp-company">Sony Television &nbsp;·&nbsp; HBO India &nbsp;·&nbsp; AXN India &nbsp;·&nbsp; Animax</div>
+        <ul class="exp-bullets">
+          <li>Generated <strong>&#8377;750 million in advertising sales for AXN India</strong> through India-specific content curation and co-branded reality series.</li>
+          <li>Drove HBO India ad spot rates to <strong>4x prior value</strong>, delivering a then-record <strong>&#8377;1,500 million in FY 2003–04</strong> — the channel's highest India revenue.</li>
+        </ul>
+      </div>
+
+      <!-- YAHOO -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Branch Head &amp; General Manager – Business Development</div>
+          <div class="exp-period">1998 – 2002</div>
+        </div>
+        <div class="exp-company">Yahoo! India — Founding Regional Team, North &amp; East India</div>
+        <div class="exp-context">One of Yahoo! India's earliest senior hires. A founding-generation practitioner of SEM and programmatic digital advertising in India.</div>
+        <ul class="exp-bullets">
+          <li>Established Yahoo!'s North &amp; East operations from the ground up; managed global accounts: <strong>Pepsi, HP, MasterCard, Pernod Ricard</strong>.</li>
+          <li>Delivered <strong>5x regional revenue growth</strong> over 4 years — consistently Yahoo!'s top-performing regional office nationally.</li>
+          <li><strong>Among India's first SEM and programmatic sales practitioners</strong> — built commercial frameworks that became the national template for Yahoo!'s operations.</li>
+        </ul>
+      </div>
+
+      <!-- NIMBUS -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Sales Manager – North India</div>
+          <div class="exp-period">1995 – 1998</div>
+        </div>
+        <div class="exp-company">Nimbus Communications &nbsp;·&nbsp; Neo Sports</div>
+        <ul class="exp-bullets">
+          <li>Generated <strong>USD $114 million in sponsorship sales from North India alone</strong> during the ICC Cricket World Cup 1996 campaign.</li>
+          <li>Contributed to <strong>USD $200 million in cumulative revenue</strong>; grew ad network footprint by 45%; increased TV market share by 25%.</li>
+        </ul>
+      </div>
+
+    </div><!-- /experience -->
+
+    <div class="section">
+      <div class="section-title">Education &amp; Certifications</div>
+      <div class="edu-grid">
+        <div class="edu-item">
+          <div class="edu-degree">MBA – Post Graduate Diploma in Business Administration</div>
+          <div class="edu-inst">Symbiosis University, Pune</div>
+          <div class="edu-year">2004</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Certified Digital Content Marketing Strategist</div>
+          <div class="edu-inst">Digital Marketer, Austin, Texas (USA)</div>
+          <div class="edu-year">2016</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Bachelor of Commerce (B.Com)</div>
+          <div class="edu-inst">Delhi University</div>
+          <div class="edu-year">1995</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Higher Secondary – Commerce Stream</div>
+          <div class="edu-inst">Naval Public School</div>
+          <div class="edu-year">1992</div>
+        </div>
+      </div>
+      <div class="cert-list">
+        <span class="cert-tag">Google Analytics IQ</span>
+        <span class="cert-tag">Google AdWords Search</span>
+        <span class="cert-tag">Adobe Certified Associate (ACA)</span>
+        <span class="cert-tag">Display &amp; Video 360</span>
+        <span class="cert-tag">Search Ads 360</span>
+        <span class="cert-tag">AI Product Management</span>
+        <span class="cert-tag">Anthropic Claude · CrewAI</span>
+        <span class="cert-tag">Credly Verified Badges</span>
+      </div>
+    </div>
+
+  </div><!-- /cv-body -->
+
+  <div class="cv-footer">
+    <span>Sanjeev Kalia &nbsp;·&nbsp; Updated 2025</span>
+    <a href="https://linkedin.com/in/sanjivkalia/" target="_blank">linkedin.com/in/sanjivkalia</a>
+    <a href="https://www.credly.com/users/sanjeevkalia" target="_blank">credly.com/users/sanjeevkalia</a>
+  </div>
+
+</div><!-- /cv-wrapper -->
+</div><!-- /page-cv -->
+
+
+<!-- ══════════════════════════════════
+     CHANGES LOG PAGE
+══════════════════════════════════ -->
+<div class="page" id="page-changes">
+<div class="cv-wrapper">
+<div class="changes-body">
+
+  <h2>What Changed: Original &#8594; Final CV</h2>
+  <p style="font-size:12.5px;color:var(--muted);margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--gold);">Every number is now locked, definite, dual-currency, and timebound</p>
+
+  <table>
+    <thead>
+      <tr style="background:var(--light);">
+        <th style="color:var(--navy);">Metric / Item</th>
+        <th style="color:#c0392b;">Original CV</th>
+        <th style="color:var(--teal);">Final CV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:600;">InsideSport Traffic</td><td style="color:var(--muted);">"5x increase" — no baseline</td><td style="color:var(--teal);font-weight:600;">10M &#8594; 16M monthly visitors (+60%) in 12 months</td></tr>
+      <tr style="background:var(--light);"><td style="font-weight:600;">InsideSport Revenue</td><td style="color:var(--muted);">"40% revenue growth" — no baseline</td><td style="color:var(--teal);font-weight:600;">&#8377;4 Crore ($481K) &#8594; &#8377;8 Crore ($963K) in 12 months</td></tr>
+      <tr><td style="font-weight:600;">Innobles Sales</td><td style="color:var(--muted);">"ROI 3x to 8x" — unclear metric</td><td style="color:var(--teal);font-weight:600;">&#8377;10 Cr ($1.2M) &#8594; &#8377;16 Cr ($1.93M) in 12 months, 60% YoY</td></tr>
+      <tr style="background:var(--light);"><td style="font-weight:600;">Marketing Budget</td><td style="color:var(--muted);">Not mentioned</td><td style="color:var(--teal);font-weight:600;">&#8377;1.5 Crore (~$180K) managed; 8x ROI achieved</td></tr>
+      <tr><td style="font-weight:600;">2026 Pipeline</td><td style="color:var(--muted);">Not mentioned</td><td style="color:var(--teal);font-weight:600;">&#8377;20 Crore ($2.4M) qualified pipeline</td></tr>
+      <tr style="background:var(--light);"><td style="font-weight:600;">OYE Group Revenue</td><td style="color:var(--muted);">Zero revenue figure for 10-yr business</td><td style="color:var(--teal);font-weight:600;">&#8377;8 Crore (~$963K) peak annual revenue</td></tr>
+      <tr><td style="font-weight:600;">AI Credentials</td><td style="color:var(--muted);">"AI product management" tag only</td><td style="color:var(--teal);font-weight:600;">HRMS Agent + Booklinq named, tools cited, products described</td></tr>
+      <tr style="background:var(--light);"><td style="font-weight:600;">Role Scope</td><td style="color:var(--muted);">Reads as Marketing/Sales CV only</td><td style="color:var(--teal);font-weight:600;">Opens CEO, CDO, CAIO, Board, VC Operating Partner roles</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid var(--mid);">&#127919; Roles This CV Now Targets</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">CEO / MD</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">COO</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">Chief Digital Officer</span>
+    <span style="background:var(--teal);color:#fff;font-size:11px;padding:5px 12px;border-radius:3px;">Chief AI Officer (CAIO)</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">Chief Growth Officer</span>
+    <span style="background:var(--teal);color:#fff;font-size:11px;padding:5px 12px;border-radius:3px;">AI Startup CEO / Co-founder</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">Business Transformation Lead</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">Independent Board Director</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">VC / PE Operating Partner</span>
+    <span style="background:var(--navy);color:#c5d5e0;font-size:11px;padding:5px 12px;border-radius:3px;">Strategic Advisor / Consultant</span>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#0d1b2a,#0a2218);border:1px solid rgba(201,168,76,0.4);border-radius:6px;padding:18px 22px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">&#9889; One Final Action: Add Booklinq URL</div>
+    <div style="font-size:13px;color:#c5d5e0;line-height:1.75;">
+      Once Booklinq has a live domain, add it to your CV header as <span style="color:var(--gold);">&#127760; booklinq.com</span>. A working AI product on a C-suite CV proves you are a <strong style="color:#fff;">builder</strong>, not just a strategist — and instantly separates you from every other candidate in the market.
+    </div>
+  </div>
+
+</div>
+</div>
+</div><!-- /page-changes -->
+
+<script>
+  function showPage(page, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function copyText() {
+    const text = `SANJEEV KALIA
+Business Transformation · Digital Strategy · AI Product Builder · P&L Leadership · C-Suite Executive
+skaliaomen@outlook.com | +91 98114 20446 | Faridabad, Haryana, India
+linkedin.com/in/sanjivkalia | credly.com/users/sanjeevkalia
+
+AI PRODUCTS BUILT:
+- HRMS AI Agent (Anthropic Claude + CrewAI)
+- Booklinq — AI-powered Global Hotel Booking Platform (Launch-Ready)
+
+KEY METRICS: 30+ Years Leadership | Rs 8B+ Revenue | $2.4M 2026 Pipeline | 150+ Brands | 600+ Mentored | 2 AI Products Built
+
+EXECUTIVE SUMMARY
+Results-driven C-suite executive and AI product builder with 30 years of leadership across media, SaaS, digital transformation, and startups. Generated Rs 8B+ in revenue. Yahoo! India founding team (1998). Building HRMS AI Agent and Booklinq with Anthropic Claude + CrewAI.
+
+EXPERIENCE
+
+CMO & Chief Growth Officer | Innobles · Axia Health Services | Jan 2024–Present
+- Sales: Rs 10 Cr ($1.2M) to Rs 16 Cr ($1.93M) in 12 months (+60% YoY)
+- Built Rs 20 Cr ($2.4M) qualified pipeline for 2026
+- Managed Rs 1.5 Cr ($180K) marketing budget; 8x ROI (up from 3x)
+- Market entry: UAE, USA, Canada, South Africa
+- Led 20-person team; +35% delivery velocity via OKRs
+AI Products: HRMS Agent (HR automation) + Booklinq (global hotel AI, launch-ready) — Anthropic Claude + CrewAI
+
+CEO | InsideSport.in · Better Collective (NASDAQ: BECO) | Jan–Dec 2023
+- Traffic: 10M to 16M monthly visitors (+60%) in 12 months
+- Revenue: Rs 4 Cr ($481K) to Rs 8 Cr ($963K) — doubled in 12 months
+- Bounce rate -30pts; session time +15x in 60 days
+- AdSense CPMs +40x; SSP revenues +50x via Ad Exchange
+- High-performer attrition -40% in 12 months
+
+CMO & Startup Mentor | UIncept Accelerator · JIMS | Feb 2020–Nov 2022
+- Top 50 Global Accelerator ranking achieved
+- 90+ EdTech startups mentored; 12 companies raised Series B/C
+- JIMS: +25% application volumes via brand repositioning
+
+Founder, CEO & CSO | OYE Group | Nov 2010–Jan 2020
+- Rs 8 Crore (~$963K) peak annual revenue built from zero
+- 80-person team; 90+ client accounts; 100+ large-scale events
+- CPA reduced ~30% via proprietary SEO/content framework
+- India's Leading Digital & Creative Boutique Agency award
+
+President – Sales & Marketing | BAG Films (News24, E24, 10FM) | 2007–2010
+- Rs 600M cumulative revenue; News24: 9th to 5th in Hindi News in 15 months
+
+Regional Head AVP | Times Group · Zoom TV | 2004–2007
+- 4x revenue in 6 months; 50% national revenue from North & East
+
+Head Sales & Content | Sony TV · HBO · AXN | 2002–2004
+- Rs 750M AXN ad sales; HBO India record Rs 1,500M revenue FY03-04 (4x prior rates)
+
+Branch Head & GM | Yahoo! India | 1998–2002
+- 5x regional revenue growth over 4 years
+- Among India's first SEM/programmatic practitioners
+- Accounts: Pepsi, HP, MasterCard, Pernod Ricard
+
+Sales Manager | Nimbus Communications | 1995–1998
+- $114M North India sponsorship sales, ICC World Cup 1996
+- $200M cumulative revenue; network +45%; market share +25%
+
+EDUCATION
+MBA (PGDBA) – Symbiosis University Pune, 2004
+Certified Digital Content Marketing Strategist – Digital Marketer Austin TX, 2016
+B.Com – Delhi University, 1995
+
+CERTIFICATIONS: Google Analytics IQ | AdWords Search | Adobe ACA | Display & Video 360 | Search Ads 360 | AI Product Management`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.copy-btn');
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = '⬇ Copy Plain Text'; }, 2500);
+    }).catch(() => {
+      alert('Copy failed. Please use Ctrl+A to select all and copy manually.');
+    });
+  }
+</script>
+
+</body>
+</html>
