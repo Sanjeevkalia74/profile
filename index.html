@@ -3,566 +3,335 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjeev Kalia – Executive CV</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Sanjeev Kalia - Chief Growth Officer | AI & MarTech Strategist</title>
+<meta name="description" content="Sanjeev Kalia - Chief Growth Officer, Enterprise Intelligence Architect, and AI-Powered Revenue Acceleration expert with 30+ years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --navy: #0d1b2a;
-    --teal: #1a7a6e;
-    --gold: #c9a84c;
-    --light: #f4f1ec;
-    --mid: #e8e3d9;
-    --text: #2c2c2c;
-    --muted: #6b6b6b;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: #eee9e1; color: var(--text); }
-
-  @media print {
-    .no-print { display: none !important; }
-    body { background: #fff; }
-    .cv-wrapper { padding: 0; max-width: 100%; }
-    .cv-header, .stat-strip, .ai-strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  }
-
-  /* CONTROLS */
-  .controls {
-    background: var(--navy); padding: 12px 32px;
-    display: flex; align-items: center; gap: 12px;
-    position: sticky; top: 0; z-index: 100; flex-wrap: wrap;
-  }
-  .controls-label { color: #8da3b4; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
-  .tab-btn {
-    background: transparent; border: 1px solid rgba(255,255,255,0.15);
-    color: #ccd6e0; padding: 6px 16px; border-radius: 4px;
-    font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.2s;
-  }
-  .tab-btn.active, .tab-btn:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
-  .print-btn {
-    background: transparent; border: 1px solid rgba(201,168,76,0.5);
-    color: var(--gold); padding: 6px 14px; border-radius: 4px;
-    font-family: 'DM Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.2s;
-  }
-  .print-btn:hover { background: var(--gold); color: var(--navy); }
-  .copy-btn {
-    margin-left: auto; background: var(--gold); border: none; color: var(--navy);
-    padding: 7px 18px; border-radius: 4px; font-family: 'DM Sans', sans-serif;
-    font-size: 12px; font-weight: 700; cursor: pointer;
-  }
-  .copy-btn:hover { opacity: 0.85; }
-
-  .page { display: none; }
-  .page.active { display: block; }
-
-  /* WRAPPER */
-  .cv-wrapper { max-width: 880px; margin: 0 auto; padding: 32px 16px 60px; }
-
-  /* HEADER */
-  .cv-header {
-    background: var(--navy); color: #fff; padding: 40px 48px;
-    position: relative; overflow: hidden;
-  }
-  .cv-header::before {
-    content: ''; position: absolute; top: 0; right: 0;
-    width: 300px; height: 100%;
-    background: linear-gradient(135deg, transparent 40%, rgba(26,122,110,0.15));
-    pointer-events: none;
-  }
-  .cv-header::after {
-    content: ''; position: absolute; bottom: 0; left: 0;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--teal));
-  }
-  .name { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; letter-spacing: -0.5px; }
-  .name span { color: var(--gold); }
-  .title-bar { margin-top: 8px; font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: #8da3b4; font-weight: 500; }
-  .contact-row { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 14px; }
-  .contact-item { font-size: 12.5px; color: #c5d5e0; }
-  .contact-item a { color: var(--gold); text-decoration: none; }
-  .contact-item a:hover { text-decoration: underline; }
-
-  /* AI STRIP */
-  .ai-strip {
-    background: #0a2218; padding: 10px 48px;
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    border-bottom: 1px solid rgba(201,168,76,0.3);
-  }
-  .ai-strip-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
-  .ai-pill {
-    background: rgba(26,122,110,0.35); border: 1px solid rgba(26,122,110,0.55);
-    color: #9dd4cc; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500;
-  }
-
-  /* STATS */
-  .stat-strip { background: var(--teal); display: flex; flex-wrap: wrap; }
-  .stat-item { flex: 1; min-width: 110px; padding: 16px 20px; border-right: 1px solid rgba(255,255,255,0.15); text-align: center; }
-  .stat-item:last-child { border-right: none; }
-  .stat-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #fff; }
-  .stat-label { font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 3px; }
-
-  /* BODY */
-  .cv-body { background: #fff; padding: 40px 48px; }
-  .section { margin-bottom: 30px; }
-  .section-title {
-    font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700;
-    color: var(--navy); text-transform: uppercase; letter-spacing: 2px;
-    padding-bottom: 8px; border-bottom: 2px solid var(--gold); margin-bottom: 20px;
-  }
-
-  /* SUMMARY */
-  .summary-text { font-size: 13.5px; line-height: 1.85; color: #3c3c3c; border-left: 3px solid var(--gold); padding-left: 16px; }
-
-  /* SKILLS */
-  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .skill-cluster { background: var(--light); border-radius: 6px; padding: 14px 18px; border-top: 2px solid var(--teal); }
-  .skill-cluster-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-  .skill-tag { display: block; font-size: 12px; line-height: 1.85; color: var(--text); }
-  .skill-tag::before { content: '· '; color: var(--gold); font-weight: bold; }
-
-  /* EXPERIENCE */
-  .exp-item { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid var(--mid); }
-  .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
-  .exp-role { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--navy); }
-  .exp-period { background: var(--navy); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 3px; white-space: nowrap; }
-  .exp-company { font-size: 11.5px; font-weight: 600; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 5px; }
-  .exp-context { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 10px; line-height: 1.6; }
-  .exp-bullets { list-style: none; }
-  .exp-bullets li { font-size: 13px; line-height: 1.75; color: #3a3a3a; padding: 2px 0 2px 18px; position: relative; }
-  .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 5px; }
-  .exp-bullets li strong { color: var(--navy); font-weight: 600; }
-
-  /* AI CALLOUT */
-  .ai-callout {
-    margin-top: 12px; background: linear-gradient(135deg, #0d1b2a, #0a2218);
-    border: 1px solid rgba(201,168,76,0.4); border-radius: 6px; padding: 14px 18px;
-  }
-  .ai-callout-title { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-  .ai-callout-text { font-size: 12px; line-height: 1.7; color: #b8cfd8; }
-  .ai-callout-text strong { color: #fff; }
-  .ai-product { margin-top: 8px; padding-left: 10px; border-left: 2px solid rgba(26,122,110,0.6); }
-
-  /* EDU */
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .edu-item { background: var(--light); padding: 12px 16px; border-radius: 4px; border-left: 3px solid var(--teal); }
-  .edu-degree { font-size: 13px; font-weight: 600; color: var(--navy); }
-  .edu-inst { font-size: 11px; color: var(--muted); margin-top: 2px; }
-  .edu-year { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 1px; margin-top: 4px; }
-  .cert-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-  .cert-tag { background: var(--navy); color: #c5d5e0; font-size: 10.5px; font-weight: 500; padding: 5px 12px; border-radius: 3px; }
-
-  /* FOOTER */
-  .cv-footer {
-    background: var(--navy); padding: 16px 48px;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
-  }
-  .cv-footer span { font-size: 11px; color: #4a6070; }
-  .cv-footer a { color: var(--gold); text-decoration: none; font-size: 11px; }
-
-  /* CHANGES PAGE */
-  .changes-body { background: #fff; padding: 36px 44px; }
-  .changes-body h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); margin-bottom: 4px; }
-  .changes-body table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-bottom: 28px; }
-  .changes-body th { padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--gold); }
-  .changes-body td { padding: 9px 14px; border-bottom: 1px solid var(--mid); }
-
-  @media (max-width: 640px) {
-    .cv-header, .cv-body, .ai-strip, .cv-footer, .changes-body { padding-left: 20px; padding-right: 20px; }
-    .name { font-size: 26px; }
-    .skills-grid, .edu-grid { grid-template-columns: 1fr; }
-    .controls { padding: 10px 16px; }
-    .copy-btn { margin-left: 0; width: 100%; }
-  }
+:root{--bg-body:#f0f2f5;--bg-card:#fff;--bg-glass:rgba(255,255,255,0.72);--text-primary:#1a1a2e;--text-secondary:#4a4a6a;--text-muted:#8e8ea0;--accent-1:#6c5ce7;--accent-2:#00cec9;--accent-3:#fd79a8;--accent-gradient:linear-gradient(135deg,#6c5ce7 0%,#00cec9 50%,#fd79a8 100%);--accent-gradient-warm:linear-gradient(135deg,#6c5ce7 0%,#a29bfe 40%,#fd79a8 100%);--border-light:rgba(108,92,231,0.12);--shadow-sm:0 2px 8px rgba(108,92,231,0.06);--shadow-md:0 8px 32px rgba(108,92,231,0.08);--shadow-lg:0 16px 64px rgba(108,92,231,0.12);--shadow-glow:0 0 40px rgba(108,92,231,0.15);--radius-sm:12px;--radius-md:20px;--radius-lg:28px;--radius-pill:100px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg-body);color:var(--text-primary);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#neural-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.35}
+@media print{.no-print{display:none!important}#neural-canvas{display:none!important}body{background:#fff}.cv-wrapper{box-shadow:none!important;margin:0;max-width:100%;border-radius:0}.reveal{opacity:1!important;transform:none!important}.section{page-break-inside:avoid}}
+.toolbar{position:sticky;top:0;z-index:200;background:var(--bg-glass);backdrop-filter:saturate(200%) blur(24px);-webkit-backdrop-filter:saturate(200%) blur(24px);border-bottom:1px solid var(--border-light);padding:14px 28px;display:flex;justify-content:flex-end;gap:12px}
+.btn{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;padding:10px 22px;border-radius:var(--radius-pill);border:1.5px solid var(--border-light);background:var(--bg-card);color:var(--text-primary);cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1);letter-spacing:.3px}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--accent-1);color:var(--accent-1)}
+.btn-primary{background:var(--accent-gradient);color:#fff;border:none}
+.btn-primary:hover{box-shadow:0 8px 32px rgba(108,92,231,0.35);transform:translateY(-2px) scale(1.02)}
+.cv-wrapper{position:relative;z-index:1;max-width:1020px;margin:40px auto;background:var(--bg-card);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);overflow:hidden;border:1px solid var(--border-light)}
+.hero{position:relative;padding:72px 64px 56px;background:linear-gradient(160deg,#f8f7ff 0%,#eef9f9 40%,#fff0f6 100%);overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(108,92,231,0.08) 0%,transparent 70%);animation:float-orb 8s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,206,201,0.08) 0%,transparent 70%);animation:float-orb 10s ease-in-out infinite reverse}
+@keyframes float-orb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-30px) scale(1.1)}}
+.hero-content{position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg-glass);backdrop-filter:blur(12px);border:1px solid var(--border-light);padding:8px 20px;border-radius:var(--radius-pill);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent-1);margin-bottom:24px;animation:slideInDown .8s ease-out}
+.hero-badge .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+@keyframes slideInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.hero-name{font-family:'Space Grotesk','Inter',sans-serif;font-size:52px;font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:12px;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeIn 1s ease-out .2s both}
+.hero-title{font-size:18px;font-weight:500;color:var(--text-secondary);margin-bottom:28px;letter-spacing:-.3px;animation:fadeIn 1s ease-out .4s both}
+.hero-title .sep{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent-gradient);margin:0 14px;vertical-align:middle}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-contact{display:flex;flex-wrap:wrap;gap:16px;animation:fadeIn 1s ease-out .6s both}
+.hero-contact .contact-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-pill);font-size:13px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all .3s ease}
+.hero-contact .contact-chip:hover{border-color:var(--accent-1);color:var(--accent-1);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.hero-contact .contact-chip svg{width:16px;height:16px;flex-shrink:0}
+.section{padding:56px 64px;border-bottom:1px solid var(--border-light);position:relative}
+.section:last-child{border-bottom:none}
+.section-label{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent-1);margin-bottom:28px;position:relative}
+.section-label::after{content:'';display:block;width:40px;height:3px;border-radius:3px;background:var(--accent-gradient)}
+.section-label svg{width:18px;height:18px;opacity:.7}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+.profile-text{font-size:17px;line-height:1.8;color:var(--text-secondary);font-weight:400;max-width:880px}
+.profile-text strong{color:var(--text-primary);font-weight:600}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.metric-card{position:relative;background:linear-gradient(135deg,#f8f7ff 0%,#eef9f9 100%);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:28px 24px;text-align:center;overflow:hidden;transition:all .4s cubic-bezier(.4,0,.2,1)}
+.metric-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-glow);border-color:var(--accent-1)}
+.metric-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent-gradient);opacity:0;transition:opacity .3s}
+.metric-card:hover::before{opacity:1}
+.metric-value{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:800;background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:8px}
+.metric-label{font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.exp-timeline{position:relative}
+.exp-block{position:relative;margin-bottom:48px;padding-left:36px;border-left:2px solid var(--border-light)}
+.exp-block:last-child{margin-bottom:0}
+.exp-block::before{content:'';position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent-gradient);box-shadow:0 0 0 4px var(--bg-card),0 0 0 6px rgba(108,92,231,0.2);transition:all .3s ease}
+.exp-block:hover::before{box-shadow:0 0 0 4px var(--bg-card),0 0 0 8px rgba(108,92,231,0.3),0 0 20px rgba(108,92,231,0.2);transform:scale(1.3)}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.exp-role{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-.5px}
+.exp-date-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:linear-gradient(135deg,rgba(108,92,231,0.08),rgba(0,206,201,0.08));border-radius:var(--radius-pill);font-size:12px;font-weight:600;color:var(--accent-1);letter-spacing:.5px;white-space:nowrap}
+.exp-company{font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.exp-company .company-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--radius-pill);background:rgba(253,121,168,0.1);color:var(--accent-3);text-transform:uppercase;letter-spacing:.5px}
+.exp-bullets{list-style:none}
+.exp-bullets li{font-size:14.5px;line-height:1.7;color:var(--text-secondary);margin-bottom:12px;position:relative;padding-left:28px;transition:color .2s}
+.exp-bullets li:hover{color:var(--text-primary)}
+.exp-bullets li::before{content:'';position:absolute;left:0;top:10px;width:16px;height:2px;background:var(--accent-gradient);border-radius:2px}
+.exp-bullets li strong{color:var(--text-primary);font-weight:700;background:linear-gradient(135deg,rgba(108,92,231,0.1),rgba(0,206,201,0.1));padding:1px 6px;border-radius:4px}
+.skills-mega-section{background:linear-gradient(160deg,#f8f7ff 0%,#eef9f9 40%,#fff0f6 100%)}
+.skill-domains-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.skill-domain-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:32px 28px;transition:all .4s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.skill-domain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:4px 4px 0 0;transition:height .3s}
+.skill-domain-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.skill-domain-card:nth-child(1)::before{background:linear-gradient(135deg,#6c5ce7,#a29bfe)}
+.skill-domain-card:nth-child(2)::before{background:linear-gradient(135deg,#00cec9,#81ecec)}
+.skill-domain-card:nth-child(3)::before{background:linear-gradient(135deg,#fd79a8,#fab1a0)}
+.skill-domain-card:nth-child(4)::before{background:linear-gradient(135deg,#e17055,#fdcb6e)}
+.skill-domain-card:nth-child(5)::before{background:linear-gradient(135deg,#0984e3,#74b9ff)}
+.skill-domain-card:nth-child(6)::before{background:linear-gradient(135deg,#00b894,#55efc4)}
+.skill-domain-icon{width:48px;height:48px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:24px}
+.skill-domain-card:nth-child(1) .skill-domain-icon{background:linear-gradient(135deg,rgba(108,92,231,0.15),rgba(162,155,254,0.15))}
+.skill-domain-card:nth-child(2) .skill-domain-icon{background:linear-gradient(135deg,rgba(0,206,201,0.15),rgba(129,236,236,0.15))}
+.skill-domain-card:nth-child(3) .skill-domain-icon{background:linear-gradient(135deg,rgba(253,121,168,0.15),rgba(250,177,160,0.15))}
+.skill-domain-card:nth-child(4) .skill-domain-icon{background:linear-gradient(135deg,rgba(225,112,85,0.15),rgba(253,203,110,0.15))}
+.skill-domain-card:nth-child(5) .skill-domain-icon{background:linear-gradient(135deg,rgba(9,132,227,0.15),rgba(116,185,255,0.15))}
+.skill-domain-card:nth-child(6) .skill-domain-icon{background:linear-gradient(135deg,rgba(0,184,148,0.15),rgba(85,239,196,0.15))}
+.skill-domain-title{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:16px;letter-spacing:-.3px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;background:var(--bg-body);border:1px solid transparent;border-radius:var(--radius-pill);font-size:12px;font-weight:500;color:var(--text-secondary);transition:all .3s ease;cursor:default}
+.skill-tag:hover{background:var(--bg-card);border-color:var(--accent-1);color:var(--accent-1);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.skill-proficiency-section{margin-top:8px}
+.proficiency-header{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--text-primary);margin-bottom:28px;letter-spacing:-.3px}
+.proficiency-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px}
+.proficiency-item{display:flex;flex-direction:column;gap:8px}
+.proficiency-meta{display:flex;justify-content:space-between;align-items:center}
+.proficiency-name{font-size:14px;font-weight:600;color:var(--text-primary)}
+.proficiency-pct{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--accent-1)}
+.proficiency-bar-track{width:100%;height:8px;background:rgba(108,92,231,0.08);border-radius:8px;overflow:hidden}
+.proficiency-bar-fill{height:100%;border-radius:8px;background:var(--accent-gradient);width:0;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+.stack-flow{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:24px}
+.stack-card{flex:1 1 200px;min-width:200px;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:24px;position:relative;transition:all .35s ease}
+.stack-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--accent-1)}
+.stack-card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.stack-card-title{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:10px;text-transform:uppercase;letter-spacing:.8px}
+.stack-card-items{display:flex;flex-wrap:wrap;gap:6px}
+.stack-item{padding:5px 12px;background:var(--bg-body);border-radius:var(--radius-pill);font-size:12px;font-weight:500;color:var(--text-secondary);transition:all .2s}
+.stack-item:hover{background:rgba(108,92,231,0.08);color:var(--accent-1)}
+.edu-certs-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.edu-card{background:linear-gradient(135deg,#f8f7ff,#eef9f9);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:28px;margin-bottom:16px;transition:all .3s ease}
+.edu-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.edu-degree{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;letter-spacing:-.2px}
+.edu-school{font-size:14px;color:var(--text-muted);line-height:1.5}
+.cert-grid{display:flex;flex-wrap:wrap;gap:10px}
+.cert-badge{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--text-secondary);transition:all .3s ease}
+.cert-badge:hover{border-color:var(--accent-2);color:var(--accent-1);transform:translateY(-2px);box-shadow:var(--shadow-sm);background:linear-gradient(135deg,rgba(108,92,231,0.04),rgba(0,206,201,0.04))}
+.cert-badge .cert-icon{width:20px;height:20px;border-radius:50%;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:800}
+.interests-flex{display:flex;flex-wrap:wrap;gap:12px}
+.interest-chip{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,rgba(108,92,231,0.06),rgba(0,206,201,0.06));border:1px solid var(--border-light);border-radius:var(--radius-pill);font-size:14px;font-weight:500;color:var(--text-secondary);transition:all .3s ease}
+.interest-chip:hover{background:linear-gradient(135deg,rgba(108,92,231,0.12),rgba(0,206,201,0.12));transform:translateY(-3px);box-shadow:var(--shadow-sm);color:var(--accent-1)}
+.interest-chip .emoji{font-size:18px}
+@media(max-width:900px){.skill-domains-grid{grid-template-columns:repeat(2,1fr)}.metrics-grid{grid-template-columns:repeat(2,1fr)}.proficiency-grid{grid-template-columns:1fr}.edu-certs-grid{grid-template-columns:1fr}.stack-flow{flex-direction:column}}
+@media(max-width:640px){.hero{padding:40px 24px 32px}.hero-name{font-size:36px}.section{padding:36px 24px}.skill-domains-grid{grid-template-columns:1fr}.metrics-grid{grid-template-columns:1fr 1fr}.exp-top{flex-direction:column}}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg-body)}
+::-webkit-scrollbar-thumb{background:rgba(108,92,231,0.2);border-radius:8px}
+::-webkit-scrollbar-thumb:hover{background:rgba(108,92,231,0.4)}
 </style>
 </head>
 <body>
-
-<!-- CONTROLS -->
-<div class="controls no-print">
-  <span class="controls-label">View</span>
-  <button class="tab-btn active" onclick="showPage('cv', this)">📄 CV</button>
-  <button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button>
-  <button class="copy-btn" onclick="copyText()">⬇ Copy Plain Text</button>
+<canvas id="neural-canvas"></canvas>
+<div class="toolbar no-print">
+  <button class="btn" onclick="window.print()">
+    <svg style="width:14px;height:14px;vertical-align:-2px;margin-right:6px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / PDF
+  </button>
+  <button class="btn btn-primary" onclick="copyText()">
+    <svg style="width:14px;height:14px;vertical-align:-2px;margin-right:6px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    Copy Plain Text
+  </button>
 </div>
-
-<!-- ══════════════════════════════════
-     CV PAGE
-══════════════════════════════════ -->
-<div class="page active" id="page-cv">
-<div class="cv-wrapper">
-
-  <div class="cv-header">
-    <div class="name">SANJEEV <span>KALIA</span></div>
-    <div class="title-bar">Business Transformation &nbsp;·&nbsp; Digital Strategy &nbsp;·&nbsp; AI Product Builder &nbsp;·&nbsp; P&amp;L Leadership &nbsp;·&nbsp; C-Suite Executive</div>
-    <div class="contact-row">
-      <div class="contact-item">📧 <a href="mailto:skaliaomen@outlook.com">skaliaomen@outlook.com</a></div>
-      <div class="contact-item">📱 +91 98114 20446</div>
-      <div class="contact-item">📍 Faridabad, Haryana, India</div>
-      <div class="contact-item">🔗 <a href="https://linkedin.com/in/sanjivkalia/" target="_blank">linkedin.com/in/sanjivkalia</a></div>
-      <div class="contact-item">🏅 <a href="https://www.credly.com/users/sanjeevkalia" target="_blank">credly.com/users/sanjeevkalia</a></div>
-    </div>
-  </div>
-
-  <div class="ai-strip">
-    <span class="ai-strip-label">🤖 AI Products Built</span>
-    <span class="ai-pill">Anthropic Claude (Agentic AI)</span>
-    <span class="ai-pill">CrewAI Multi-Agent Framework</span>
-    <span class="ai-pill">HRMS AI Agent</span>
-    <span class="ai-pill">Booklinq — Global Hotel Booking AI (Launch-Ready)</span>
-  </div>
-
-  <div class="stat-strip">
-    <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Years Led</div></div>
-    <div class="stat-item"><div class="stat-num">&#8377;8B+</div><div class="stat-label">Revenue Impact</div></div>
-    <div class="stat-item"><div class="stat-num">$2.4M</div><div class="stat-label">2026 Pipeline</div></div>
-    <div class="stat-item"><div class="stat-num">150+</div><div class="stat-label">Brands Served</div></div>
-    <div class="stat-item"><div class="stat-num">600+</div><div class="stat-label">Professionals Mentored</div></div>
-    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">AI Products Built</div></div>
-  </div>
-
-  <div class="cv-body">
-
-    <div class="section">
-      <div class="section-title">Executive Summary</div>
-      <div class="summary-text">
-        A results-driven C-suite executive and hands-on AI product builder with 30 years of cross-industry leadership spanning media, technology, SaaS, digital transformation, and startup ecosystems. Generated over &#8377;8 billion in cumulative revenue across B2B, B2C, and D2C organisations — scaling businesses from zero to profitability across media, digital, and cloud sectors. One of India's earliest digital advertising practitioners, having established Yahoo! India's North and East operations in 1998 — among the first to deploy SEM and programmatic sales commercially in India. Currently building two globally disruptive AI-powered products — an HRMS Agent and Booklinq (hotel booking platform) — independently developed using Anthropic's Claude and the CrewAI multi-agent framework. Recognised for translating complex strategy into measurable commercial outcomes, leading 80+ member teams, and mentoring 600+ professionals into leadership careers.
+<div class="cv-wrapper" id="cv-content">
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="pulse-dot"></span>Open to Strategic Opportunities</div>
+      <h1 class="hero-name">Sanjeev Kalia</h1>
+      <div class="hero-title">Chief Growth Officer<span class="sep"></span>Enterprise Intelligence Architect<span class="sep"></span>AI-Powered Revenue Acceleration</div>
+      <div class="hero-contact">
+        <span class="contact-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Delhi NCR, India</span>
+        <a href="tel:+919811420446" class="contact-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+91 98114 20446</a>
+        <a href="mailto:skaliaomen@outlook.com" class="contact-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>skaliaomen@outlook.com</a>
+        <a href="https://linkedin.com/in/sanjivkalia" target="_blank" class="contact-chip"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>linkedin.com/in/sanjivkalia</a>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">Core Competencies</div>
-      <div class="skills-grid">
-        <div class="skill-cluster">
-          <div class="skill-cluster-title">&#127963; Leadership &amp; Operations</div>
-          <span class="skill-tag">C-Suite P&amp;L Ownership &amp; Budget Management</span>
-          <span class="skill-tag">Business Transformation &amp; Change Management</span>
-          <span class="skill-tag">Cross-functional Team Building (80+ members)</span>
-          <span class="skill-tag">Startup Scaling &amp; Venture Strategy</span>
-          <span class="skill-tag">Investor Relations &amp; Board Communication</span>
-          <span class="skill-tag">OKR &amp; Performance Frameworks</span>
-        </div>
-        <div class="skill-cluster">
-          <div class="skill-cluster-title">&#129504; AI Strategy &amp; Product</div>
-          <span class="skill-tag">Agentic AI Design (Anthropic Claude)</span>
-          <span class="skill-tag">Multi-Agent Systems (CrewAI Framework)</span>
-          <span class="skill-tag">AI Product Management &amp; Roadmapping</span>
-          <span class="skill-tag">Generative AI Workflow Automation</span>
-          <span class="skill-tag">Web 3.0 &amp; Emerging Technology Strategy</span>
-          <span class="skill-tag">SaaS Product Development &amp; GTM</span>
-        </div>
-        <div class="skill-cluster">
-          <div class="skill-cluster-title">&#128202; Commercial &amp; Revenue Growth</div>
-          <span class="skill-tag">Revenue Acceleration &amp; GTM Strategy</span>
-          <span class="skill-tag">Global Market Entry (UAE, USA, Canada, SA)</span>
-          <span class="skill-tag">SaaS Enterprise Sales &amp; Account Development</span>
-          <span class="skill-tag">Programmatic Advertising &amp; AdTech</span>
-          <span class="skill-tag">Strategic Alliances &amp; Partnership Building</span>
-          <span class="skill-tag">E-commerce &amp; D2C Growth Strategy</span>
-        </div>
-        <div class="skill-cluster">
-          <div class="skill-cluster-title">&#127919; Brand, Digital &amp; Content</div>
-          <span class="skill-tag">Brand Architecture &amp; Repositioning</span>
-          <span class="skill-tag">SEO, SEM &amp; Performance Marketing</span>
-          <span class="skill-tag">Omni-channel &amp; Content Strategy</span>
-          <span class="skill-tag">UI/UX Strategy &amp; Digital Product Design</span>
-          <span class="skill-tag">PR, ORM &amp; Media Relations</span>
-          <span class="skill-tag">Media Buying &amp; Planning</span>
+  </header>
+  <!-- EXECUTIVE PROFILE -->
+  <section class="section" id="profile">
+    <div class="reveal">
+      <div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Executive Profile</div>
+      <div class="profile-text">Results-driven <strong>Chief Growth Officer</strong> and <strong>Enterprise Intelligence Architect</strong> with <strong>30+ years</strong> of engineering revenue acceleration engines across SaaS, digital platforms, and enterprise AI. Expert in architecting full-funnel MarTech stacks, deploying AI-powered automation, and designing data-driven GTM strategies that deliver measurable ROI&#8212;from scaling programmatic operations to driving <strong>$200M+</strong> in cumulative revenue outcomes. Trusted by Fortune 500 brands, global media conglomerates, and government organizations to lead digital transformation, integrating predictive intelligence with aggressive sales operations to drive profound market expansion and profitability.</div>
+    </div>
+    <div class="metrics-grid reveal reveal-delay-2">
+      <div class="metric-card"><div class="metric-value"><span class="counter-value" data-target="200" data-suffix="M+" data-prefix="$">0</span></div><div class="metric-label">Revenue Driven (USD)</div></div>
+      <div class="metric-card"><div class="metric-value"><span class="counter-value" data-target="30" data-suffix="+" data-prefix="">0</span></div><div class="metric-label">Years Experience</div></div>
+      <div class="metric-card"><div class="metric-value"><span class="counter-value" data-target="90" data-suffix="+" data-prefix="">0</span></div><div class="metric-label">Startups Mentored</div></div>
+      <div class="metric-card"><div class="metric-value"><span class="counter-value" data-target="500" data-suffix="" data-prefix="F">0</span></div><div class="metric-label">Brands Served</div></div>
+    </div>
+  </section>
+  <!-- CORE COMPETENCIES -->
+  <section class="section skills-mega-section" id="skills">
+    <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Core Competencies &amp; Expertise</div></div>
+    <div class="skill-domains-grid">
+      <div class="skill-domain-card reveal reveal-delay-1"><div class="skill-domain-icon">🤖</div><div class="skill-domain-title">AI &amp; Intelligent Automation</div><div class="skill-tags"><span class="skill-tag">OpenAI / GPT APIs</span><span class="skill-tag">LLM Integration</span><span class="skill-tag">Intelligent Process Automation</span><span class="skill-tag">Predictive Analytics</span><span class="skill-tag">AI-Powered Scoring</span><span class="skill-tag">NLP Pipelines</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">AI Agent Orchestration</span></div></div>
+      <div class="skill-domain-card reveal reveal-delay-2"><div class="skill-domain-icon">📊</div><div class="skill-domain-title">MarTech &amp; Growth Engineering</div><div class="skill-tags"><span class="skill-tag">Full-Funnel GTM</span><span class="skill-tag">Revenue Operations</span><span class="skill-tag">Account-Based Marketing</span><span class="skill-tag">Marketing Automation</span><span class="skill-tag">Customer Data Platforms</span><span class="skill-tag">Lifecycle Marketing</span><span class="skill-tag">Lead Scoring &amp; Nurturing</span></div></div>
+      <div class="skill-domain-card reveal reveal-delay-3"><div class="skill-domain-icon">🎯</div><div class="skill-domain-title">AdTech &amp; Programmatic</div><div class="skill-tags"><span class="skill-tag">Programmatic Buying</span><span class="skill-tag">DV360 / GAM</span><span class="skill-tag">SSP/DSP Ecosystems</span><span class="skill-tag">Header Bidding</span><span class="skill-tag">Yield Optimization</span><span class="skill-tag">Real-Time Bidding</span><span class="skill-tag">Ad Exchange Architecture</span></div></div>
+      <div class="skill-domain-card reveal reveal-delay-1"><div class="skill-domain-icon">⚡</div><div class="skill-domain-title">Enterprise Strategy &amp; P&amp;L</div><div class="skill-tags"><span class="skill-tag">P&amp;L Ownership</span><span class="skill-tag">M&amp;A Advisory</span><span class="skill-tag">Board-Level Presentations</span><span class="skill-tag">Investor Relations</span><span class="skill-tag">Global Expansion</span><span class="skill-tag">Revenue Forecasting</span><span class="skill-tag">Strategic Partnerships</span></div></div>
+      <div class="skill-domain-card reveal reveal-delay-2"><div class="skill-domain-icon">📈</div><div class="skill-domain-title">Data &amp; Analytics Intelligence</div><div class="skill-tags"><span class="skill-tag">GA4 / Adobe Analytics</span><span class="skill-tag">Looker Studio</span><span class="skill-tag">Attribution Modeling</span><span class="skill-tag">Cohort Analysis</span><span class="skill-tag">Conversion Rate Optimization</span><span class="skill-tag">A/B Testing Frameworks</span><span class="skill-tag">Data Visualization</span></div></div>
+      <div class="skill-domain-card reveal reveal-delay-3"><div class="skill-domain-icon">🚀</div><div class="skill-domain-title">Digital Transformation</div><div class="skill-tags"><span class="skill-tag">Cloud ERP (AI-enabled)</span><span class="skill-tag">SaaS Product Strategy</span><span class="skill-tag">Digital Content Strategy</span><span class="skill-tag">SEO / SEM</span><span class="skill-tag">UI/UX Transformation</span><span class="skill-tag">Web 3.0</span><span class="skill-tag">Platform Architecture</span></div></div>
+    </div>
+    <div class="skill-proficiency-section reveal">
+      <div class="proficiency-header">Proficiency Spectrum</div>
+      <div class="proficiency-grid">
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">AI &amp; Machine Learning Strategy</span><span class="proficiency-pct">95%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="95"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">MarTech Stack Architecture</span><span class="proficiency-pct">97%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="97"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">Revenue Operations &amp; GTM</span><span class="proficiency-pct">96%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="96"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">Programmatic Advertising</span><span class="proficiency-pct">94%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="94"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">Enterprise Data Intelligence</span><span class="proficiency-pct">92%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="92"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">Digital Transformation Leadership</span><span class="proficiency-pct">98%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="98"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">Predictive Analytics &amp; Forecasting</span><span class="proficiency-pct">90%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="90"></div></div></div>
+        <div class="proficiency-item"><div class="proficiency-meta"><span class="proficiency-name">CRM Ecosystem Design</span><span class="proficiency-pct">93%</span></div><div class="proficiency-bar-track"><div class="proficiency-bar-fill" data-width="93"></div></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Professional Experience</div></div>
+    <div class="exp-timeline">
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Chief Marketing Officer &amp; Chief Growth Officer</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan 2024 &#8211; Present</div></div>
+        <div class="exp-company">INNOBLES<span class="company-tag">Cloud ERP &amp; AI Solutions</span></div>
+        <ul class="exp-bullets">
+          <li>Leading AI-powered enterprise transformation and global market expansion for cloud ERP solutions provider, spearheading the AI Automation Division to drive intelligent process automation across Fortune 500 enterprises and government organizations.</li>
+          <li>Architected end-to-end enterprise intelligence layers integrating CRM, ERP ecosystems, and AI-driven predictive scoring&#8212;<strong>reducing CAC by 32%</strong> while accelerating massive B2B pipeline velocity by <strong>45%</strong>.</li>
+          <li>Deployed AI automation frameworks enabling enterprise clients to achieve <strong>40%+ operational efficiency improvements</strong> through Intelligent Process Automation (IPA).</li>
+          <li>Elevated product ROI metrics from <strong>3x to 8x</strong> through the strategic repositioning of cloud ERP frameworks embedded with AI capabilities.</li>
+          <li>Orchestrated strategic global market expansion initiatives, securing high-value B2B enterprise partnerships within accelerated 90-day timeframes.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Chief Executive Officer</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan 2023 &#8211; Dec 2023</div></div>
+        <div class="exp-company">INSIDE SPORT .IN<span class="company-tag">Better Collective</span></div>
+        <ul class="exp-bullets">
+          <li>Transformed digital sports media platform into a high-performance engagement and revenue engine, holding full P&amp;L accountability.</li>
+          <li>Orchestrated comprehensive UI/UX transformation resulting in <strong>5x viewership acceleration</strong> and a 30% reduction in bounce rate within the first quarter.</li>
+          <li>Delivered <strong>40% revenue growth</strong> in the first quarter through strategic monetization initiatives and programmatic ad exchange optimization.</li>
+          <li>Scaled AdSense CPMs by <strong>40x</strong> and SSP revenues by <strong>50x</strong> through the implementation of a proprietary programmatic advertising exchange.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Chief Marketing Officer &amp; Mentor</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Nov 2010 &#8211; Jan 2020</div></div>
+        <div class="exp-company">JIMS<span class="company-tag">UIncept Accelerator</span></div>
+        <ul class="exp-bullets">
+          <li>Elevated the UIncept accelerator to a <strong>Top 50 Global ranking</strong>, representing the organization at major international forums to secure investment partnerships.</li>
+          <li>Mentored over <strong>90 EdTech startups</strong>, successfully guiding 12 key portfolio companies in securing substantial Series B and C funding rounds.</li>
+          <li>Led transformative brand repositioning for JIMS Management Institutes, orchestrating high-stakes networking events culminating in the signature annual iXi SUMMIT to drive funding pipelines.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Chief Executive Officer &amp; Chief Strategy Officer</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Nov 2010 &#8211; Jan 2020</div></div>
+        <div class="exp-company">OYE GROUP<span class="company-tag">Digital &amp; Creative Agency</span></div>
+        <ul class="exp-bullets">
+          <li>Founded and scaled India's Leading Digital &amp; Creative Boutique Agency, delivering integrated marketing solutions for enterprise clients across media, automotive, and fashion.</li>
+          <li>Built a high-performing <strong>80-member team</strong> delivering precision execution across 90+ concurrent client accounts, architecting solutions that generated <strong>5x+ client ROI</strong>.</li>
+          <li>Orchestrated <strong>100+ large-scale events</strong> and brand activations for top-tier clients, driving significant brand impact and customer acquisition.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">President &#8211; Sales &amp; Marketing</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2007 &#8211; 2010</div></div>
+        <div class="exp-company">BAG FILMS &amp; MEDIA<span class="company-tag">News24 &#183; E24 &#183; Radio Dhamaal</span></div>
+        <ul class="exp-bullets">
+          <li>Drove overall network revenue to <strong>$12 Million USD (&#8377;100 Crore+)</strong>, successfully steering the media ecosystem to operational breakeven within three years.</li>
+          <li>Propelled News24 to capture the <strong>#5 market position</strong> in the Hindi News genre shortly after national launch.</li>
+          <li>Executed massive, multi-city roadshows and glamorous red-carpet events, managing end-to-end ground logistics and VIP coordination for A-list superstars.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Head &#8211; Sales &amp; Strategy (English Channels)</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2002 &#8211; 2004</div></div>
+        <div class="exp-company">SONY TELEVISION<span class="company-tag">HBO &#183; AXN &#183; Animax</span></div>
+        <ul class="exp-bullets">
+          <li>Generated over <strong>$27 Million USD</strong> in combined ad sales for HBO and AXN India through exclusive, co-branded reality series events and premium activations.</li>
+          <li>Initiated the pioneering concept of Advertiser Funded Programs (AFP) for global brands, demonstrating an advanced, highly lucrative sales strategy.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Branch Head &amp; GM Business Development &#8211; North &amp; East</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>1998 &#8211; 2002</div></div>
+        <div class="exp-company">YAHOO! INDIA</div>
+        <ul class="exp-bullets">
+          <li>Served as the first Branch Head during the foundational days of Yahoo! operations in India, successfully enhancing corporate visibility among top-tier advertisers.</li>
+          <li>Managed high-value global accounts (Pepsi, HP, MasterCard) achieving a <strong>5x growth in regional sales</strong>.</li>
+          <li>Pioneered early digital monetization in the region by driving programmatic sales and executing search engine marketing solutions.</li>
+        </ul>
+      </div>
+      <div class="exp-block reveal">
+        <div class="exp-top"><div class="exp-role">Regional Sales Manager &#8211; Live Events &amp; GEC</div><div class="exp-date-badge"><svg style="width:12px;height:12px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>1995 &#8211; 1998</div></div>
+        <div class="exp-company">NIMBUS COMMUNICATIONS<span class="company-tag">Now Neo Sports</span></div>
+        <ul class="exp-bullets">
+          <li><strong>Global Sporting Events &amp; In-Stadia Rights:</strong> Pioneered innovative sponsorship strategies and managed sales for the 1996 ICC Cricket World Cup. Sold high-value in-stadia sponsorships, on-ground branding rights, and integrated sponsored content, single-handedly driving <strong>$114 Million USD</strong> in sales from the North region.</li>
+          <li><strong>Revenue Growth:</strong> Marketed major cricket tournaments and entertainment events, directly contributing to <strong>$200 Million USD</strong> in cumulative corporate revenue and establishing a foundational expertise in massive event scale.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- MARTECH STACK -->
+  <section class="section" id="stack">
+    <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>MarTech &amp; Technology Stack</div></div>
+    <div class="stack-flow">
+      <div class="stack-card reveal reveal-delay-1"><div class="stack-card-icon" style="background:linear-gradient(135deg,rgba(108,92,231,0.15),rgba(162,155,254,0.15))">🤖</div><div class="stack-card-title">AI &amp; Automation</div><div class="stack-card-items"><span class="stack-item">OpenAI API</span><span class="stack-item">LangChain</span><span class="stack-item">Cloud ERP (AI)</span><span class="stack-item">IPA Frameworks</span><span class="stack-item">AI Agents</span></div></div>
+      <div class="stack-card reveal reveal-delay-2"><div class="stack-card-icon" style="background:linear-gradient(135deg,rgba(0,206,201,0.15),rgba(129,236,236,0.15))">💼</div><div class="stack-card-title">CRM &amp; Marketing</div><div class="stack-card-items"><span class="stack-item">Salesforce</span><span class="stack-item">HubSpot</span><span class="stack-item">Marketo</span><span class="stack-item">Zoho CRM</span><span class="stack-item">Pardot</span></div></div>
+      <div class="stack-card reveal reveal-delay-3"><div class="stack-card-icon" style="background:linear-gradient(135deg,rgba(253,121,168,0.15),rgba(250,177,160,0.15))">📡</div><div class="stack-card-title">Ad Tech</div><div class="stack-card-items"><span class="stack-item">Google Ad Manager</span><span class="stack-item">DV360</span><span class="stack-item">SSP/DSP</span><span class="stack-item">Prebid.js</span></div></div>
+      <div class="stack-card reveal reveal-delay-4"><div class="stack-card-icon" style="background:linear-gradient(135deg,rgba(9,132,227,0.15),rgba(116,185,255,0.15))">📊</div><div class="stack-card-title">Analytics</div><div class="stack-card-items"><span class="stack-item">GA4</span><span class="stack-item">Search Ads 360</span><span class="stack-item">Looker Studio</span><span class="stack-item">Adobe Analytics</span><span class="stack-item">Mixpanel</span></div></div>
+      <div class="stack-card reveal reveal-delay-1"><div class="stack-card-icon" style="background:linear-gradient(135deg,rgba(0,184,148,0.15),rgba(85,239,196,0.15))">🔍</div><div class="stack-card-title">Content &amp; SEO</div><div class="stack-card-items"><span class="stack-item">SEMrush</span><span class="stack-item">Ahrefs</span><span class="stack-item">WordPress</span><span class="stack-item">Clearscope</span><span class="stack-item">SurferSEO</span></div></div>
+    </div>
+  </section>
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section class="section" id="education">
+    <div class="edu-certs-grid">
+      <div>
+        <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</div></div>
+        <div class="edu-card reveal reveal-delay-1"><div class="edu-degree">Post-Graduate Diploma in Business Administration (PGDBA)</div><div class="edu-school">Symbiosis Institute of Business Management (SIBM), Pune &#183; 2004<br>Executive / Part-Time Programme</div></div>
+        <div class="edu-card reveal reveal-delay-2"><div class="edu-degree">Bachelor of Commerce (B.Com)</div><div class="edu-school">Delhi University &#183; 1995</div></div>
+      </div>
+      <div>
+        <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15l-3-3h6l-3 3z"/><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>Certifications</div></div>
+        <div class="cert-grid reveal reveal-delay-1">
+          <span class="cert-badge"><span class="cert-icon">✓</span>Certified Digital Content Marketing Strategist (2016)</span>
+          <span class="cert-badge"><span class="cert-icon">✓</span>Google Analytics IQ</span>
+          <span class="cert-badge"><span class="cert-icon">✓</span>Google AdWords Search</span>
+          <span class="cert-badge"><span class="cert-icon">✓</span>Adobe Certified Associate</span>
+          <span class="cert-badge"><span class="cert-icon">✓</span>Display &amp; Video 360</span>
+          <span class="cert-badge"><span class="cert-icon">✓</span>Search Ads 360</span>
         </div>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">Professional Experience</div>
-
-      <!-- INNOBLES -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Chief Marketing Officer &amp; Chief Growth Officer</div>
-          <div class="exp-period">JAN 2024 – PRESENT</div>
-        </div>
-        <div class="exp-company">Innobles (Cloud ERP / SaaS) &nbsp;·&nbsp; Axia Health Services</div>
-        <div class="exp-context">Full commercial ownership of a cloud ERP firm's global revenue engine, managing a &#8377;1.5 Crore (~$180K) annual marketing budget and leading enterprise expansion into 4 international markets. Concurrent brand portfolio leadership for a healthcare services group.</div>
-        <ul class="exp-bullets">
-          <li>Grew annual sales from <strong>&#8377;10 Crore (~$1.2M) to &#8377;16 Crore (~$1.93M) in 12 months</strong> — a 60% YoY increase — by redesigning the GTM strategy and integrating AI-driven B2B outreach and account-based marketing.</li>
-          <li>Built and qualified a <strong>forward pipeline of &#8377;20 Crore (~$2.4M) for 2026</strong> through systematic account development, partner channel activation, and referral network expansion.</li>
-          <li>Managed a marketing budget of <strong>&#8377;1.5 Crore (~$180K)</strong>, achieving an <strong>8x return on spend</strong> (up from 3x at tenure start) through rigorous campaign performance optimisation.</li>
-          <li>Executed international market entry across <strong>UAE, USA, Canada, and South Africa</strong>, establishing regional partner relationships and generating qualified enterprise leads within the first two quarters.</li>
-          <li>Built and led a cross-functional team of <strong>20 professionals</strong> — implementing OKR frameworks that improved delivery velocity by 35% quarter-on-quarter.</li>
-          <li>Designed and launched the full brand identity for Axia Health Services, resulting in measurable client acquisition uplift among tier-1 healthcare organisations in India.</li>
-        </ul>
-        <div class="ai-callout">
-          <div class="ai-callout-title">&#129504; AI Products Independently Built (Alongside This Role)</div>
-          <div class="ai-callout-text">
-            Using <strong>Anthropic Claude</strong> and the <strong>CrewAI multi-agent framework</strong>, independently architected two globally disruptive AI software products:
-            <div class="ai-product"><strong>&#9312; HRMS AI Agent</strong> — An agentic AI system automating end-to-end HR workflows (recruitment, onboarding, payroll intelligence, performance analytics) — replacing legacy HRMS platforms with an adaptive conversational AI layer that significantly reduces HR operational overhead for mid-to-large enterprises.</div>
-            <div class="ai-product"><strong>&#9313; Booklinq</strong> — An AI-powered global hotel booking platform using autonomous agents for dynamic pricing, inventory management, and hyper-personalised travel recommendations. <strong>Launch-ready for global deployment.</strong> Targets the $600B+ global travel booking market, positioned to disrupt incumbent OTA platforms through agentic AI differentiation.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- INSIDESPORT -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Chief Executive Officer</div>
-          <div class="exp-period">JAN 2023 – DEC 2023</div>
-        </div>
-        <div class="exp-company">InsideSport.in &nbsp;·&nbsp; Better Collective A/S (NASDAQ Copenhagen: BECO)</div>
-        <div class="exp-context">Recruited post-acquisition by Better Collective — a globally listed sports media group — to lead InsideSport.in's full transformation, with complete P&amp;L responsibility.</div>
-        <ul class="exp-bullets">
-          <li>Scaled global monthly traffic from <strong>10 million to 16 million unique visitors (+60%)</strong> within 12 months through editorial restructure, SEO overhaul, and partnerships expanding reach by 20x.</li>
-          <li>Doubled annual revenue from <strong>&#8377;4 Crore (~$481K) to &#8377;8 Crore (~$963K)</strong> in 12 months through programmatic expansion and an Advertiser Funded Content (AFC) monetisation model.</li>
-          <li>Reduced bounce rate by <strong>30 percentage points</strong> and grew average session time <strong>15x within 60 days</strong> via full UI/UX redesign.</li>
-          <li>Deployed Ad Exchange with SSP integration: <strong>AdSense CPMs grew 40x; SSP revenues grew 50x</strong> vs. pre-tenure baselines.</li>
-          <li>Reduced high-performer attrition by <strong>40% in 12 months</strong> through restructured incentive and progression frameworks.</li>
-        </ul>
-      </div>
-
-      <!-- UINCEPT -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Chief Marketing Officer &amp; Startup Mentor</div>
-          <div class="exp-period">FEB 2020 – NOV 2022</div>
-        </div>
-        <div class="exp-company">UIncept Accelerator &nbsp;·&nbsp; JIMS Management Institutes</div>
-        <div class="exp-context">Senior leadership at one of India's most active EdTech accelerators, while concurrently directing brand transformation for a leading management institution in Delhi.</div>
-        <ul class="exp-bullets">
-          <li>Elevated UIncept to a <strong>Top 50 Global Accelerator</strong> ranking, attracting cross-border investor attention and international deal flow.</li>
-          <li>Mentored <strong>90+ EdTech startups</strong>; directly guided <strong>12 portfolio companies to Series B and C funding rounds</strong>.</li>
-          <li>Led JIMS brand repositioning, increasing application volumes by an estimated <strong>25%</strong> through digital-first, youth-oriented communications.</li>
-          <li>Represented UIncept at <strong>international forums across 5+ countries</strong>, building a global EdTech partnership ecosystem.</li>
-        </ul>
-      </div>
-
-      <!-- OYE GROUP -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Founder, CEO &amp; Chief Strategy Officer</div>
-          <div class="exp-period">NOV 2010 – JAN 2020</div>
-        </div>
-        <div class="exp-company">OYE Group — Digital &amp; Creative Boutique Agency (Self-Founded)</div>
-        <div class="exp-context">Built a full-service digital and creative agency from founding to &#8377;8 Crore (~$963K) peak annual revenue over a decade.</div>
-        <ul class="exp-bullets">
-          <li>Grew from zero to <strong>&#8377;8 Crore (~$963K) peak annual revenue</strong>; recognised as <strong>India's Leading Digital &amp; Creative Boutique Agency</strong>.</li>
-          <li>Led a team of <strong>80 professionals</strong>; maintained 90%+ client retention across 90+ accounts.</li>
-          <li>Delivered <strong>100+ large-scale events</strong> for marquee brands in media, fashion, automotive, and lifestyle sectors.</li>
-          <li>Developed a proprietary SEO &amp; content framework across client accounts, reducing average cost-per-acquisition by ~30%.</li>
-          <li>Built strategic brand partnerships in <strong>Education, E-commerce, FMCG, and Lifestyle</strong> verticals, generating multi-year retainer relationships.</li>
-        </ul>
-      </div>
-
-      <!-- BAG FILMS -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">President – Sales &amp; Marketing</div>
-          <div class="exp-period">2007 – 2010</div>
-        </div>
-        <div class="exp-company">BAG Films &amp; Media Ltd &nbsp;·&nbsp; News24 &nbsp;·&nbsp; E24 (Bollywood News) &nbsp;·&nbsp; 10 FM Radio</div>
-        <ul class="exp-bullets">
-          <li>Achieved <strong>&#8377;600 million in cumulative revenue</strong>; drove all three brands to operational breakeven by Year 3.</li>
-          <li>Elevated News24 from <strong>9th to 5th in Hindi News genre</strong> within 15 months of the channel's national launch.</li>
-          <li>Led integrated cross-functional teams of 60+ across content, strategy, operations, and marketing for three concurrent media products.</li>
-        </ul>
-      </div>
-
-      <!-- ZOOM TV -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Regional Head (AVP) – Revenue &amp; Events, North &amp; East India</div>
-          <div class="exp-period">2004 – 2007</div>
-        </div>
-        <div class="exp-company">The Times Group &nbsp;·&nbsp; Zoom TV (Premium Lifestyle Entertainment)</div>
-        <ul class="exp-bullets">
-          <li>Delivered <strong>4x revenue growth within 6 months</strong> of Zoom TV's national launch.</li>
-          <li>Generated <strong>50% of national revenue</strong> from North &amp; East — outperforming Mumbai HQ market by contribution within the launch year.</li>
-          <li>Pioneered Advertiser-Funded Programs (AFPs) with Nokia, Pepsi, Hero Honda, and Mastercard — replicated across Times Network.</li>
-          <li>Won <strong>multiple Chairman's Awards</strong> for highest sales performance in consecutive quarters.</li>
-        </ul>
-      </div>
-
-      <!-- SONY -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Head of Sales &amp; Content Strategy – English Channels</div>
-          <div class="exp-period">2002 – 2004</div>
-        </div>
-        <div class="exp-company">Sony Television &nbsp;·&nbsp; HBO India &nbsp;·&nbsp; AXN India &nbsp;·&nbsp; Animax</div>
-        <ul class="exp-bullets">
-          <li>Generated <strong>&#8377;750 million in advertising sales for AXN India</strong> through India-specific content curation and co-branded reality series.</li>
-          <li>Drove HBO India ad spot rates to <strong>4x prior value</strong>, delivering a then-record <strong>&#8377;1,500 million in FY 2003–04</strong> — the channel's highest India revenue.</li>
-        </ul>
-      </div>
-
-      <!-- YAHOO -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Branch Head &amp; General Manager – Business Development</div>
-          <div class="exp-period">1998 – 2002</div>
-        </div>
-        <div class="exp-company">Yahoo! India — Founding Regional Team, North &amp; East India</div>
-        <div class="exp-context">One of Yahoo! India's earliest senior hires. A founding-generation practitioner of SEM and programmatic digital advertising in India.</div>
-        <ul class="exp-bullets">
-          <li>Established Yahoo!'s North &amp; East operations from the ground up; managed global accounts: <strong>Pepsi, HP, MasterCard, Pernod Ricard</strong>.</li>
-          <li>Delivered <strong>5x regional revenue growth</strong> over 4 years — consistently Yahoo!'s top-performing regional office nationally.</li>
-          <li><strong>Among India's first SEM and programmatic sales practitioners</strong> — built commercial frameworks that became the national template for Yahoo!'s operations.</li>
-        </ul>
-      </div>
-
-      <!-- NIMBUS -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-role">Sales Manager – North India</div>
-          <div class="exp-period">1995 – 1998</div>
-        </div>
-        <div class="exp-company">Nimbus Communications &nbsp;·&nbsp; Neo Sports</div>
-        <ul class="exp-bullets">
-          <li>Generated <strong>USD $114 million in sponsorship sales from North India alone</strong> during the ICC Cricket World Cup 1996 campaign.</li>
-          <li>Contributed to <strong>USD $200 million in cumulative revenue</strong>; grew ad network footprint by 45%; increased TV market share by 25%.</li>
-        </ul>
-      </div>
-
-    </div><!-- /experience -->
-
-    <div class="section">
-      <div class="section-title">Education &amp; Certifications</div>
-      <div class="edu-grid">
-        <div class="edu-item">
-          <div class="edu-degree">MBA – Post Graduate Diploma in Business Administration</div>
-          <div class="edu-inst">Symbiosis University, Pune</div>
-          <div class="edu-year">2004</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">Certified Digital Content Marketing Strategist</div>
-          <div class="edu-inst">Digital Marketer, Austin, Texas (USA)</div>
-          <div class="edu-year">2016</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">Bachelor of Commerce (B.Com)</div>
-          <div class="edu-inst">Delhi University</div>
-          <div class="edu-year">1995</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">Higher Secondary – Commerce Stream</div>
-          <div class="edu-inst">Naval Public School</div>
-          <div class="edu-year">1992</div>
-        </div>
-      </div>
-      <div class="cert-list">
-        <span class="cert-tag">Google Analytics IQ</span>
-        <span class="cert-tag">Google AdWords Search</span>
-        <span class="cert-tag">Adobe Certified Associate (ACA)</span>
-        <span class="cert-tag">Display &amp; Video 360</span>
-        <span class="cert-tag">Search Ads 360</span>
-        <span class="cert-tag">AI Product Management</span>
-        <span class="cert-tag">Anthropic Claude · CrewAI</span>
-        <span class="cert-tag">Credly Verified Badges</span>
-      </div>
+  </section>
+  <!-- INTERESTS -->
+  <section class="section" id="interests">
+    <div class="reveal"><div class="section-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Interests</div></div>
+    <div class="interests-flex reveal reveal-delay-1">
+      <span class="interest-chip"><span class="emoji">🧠</span>AI-Driven Enterprise Automation</span>
+      <span class="interest-chip"><span class="emoji">🌐</span>Web 3.0 &amp; Emerging Tech</span>
+      <span class="interest-chip"><span class="emoji">💡</span>Creative Innovation</span>
+      <span class="interest-chip"><span class="emoji">🌱</span>Sustainable Business</span>
+      <span class="interest-chip"><span class="emoji">🎮</span>Gaming &amp; Interactive Media</span>
+      <span class="interest-chip"><span class="emoji">🌍</span>Global Market Expansion</span>
     </div>
-
-  </div><!-- /cv-body -->
-
-  <div class="cv-footer">
-    <span>Sanjeev Kalia &nbsp;·&nbsp; Updated 2025</span>
-    <a href="https://linkedin.com/in/sanjivkalia/" target="_blank">linkedin.com/in/sanjivkalia</a>
-    <a href="https://www.credly.com/users/sanjeevkalia" target="_blank">credly.com/users/sanjeevkalia</a>
-  </div>
-
-</div><!-- /cv-wrapper -->
-</div><!-- /page-cv -->
-
-  <div style="background:linear-gradient(135deg,#0d1b2a,#0a2218);border:1px solid rgba(201,168,76,0.4);border-radius:6px;padding:18px 22px;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">&#9889; 
-  </div>
-
+  </section>
 </div>
-</div>
-</div><!-- /page-changes -->
-
 <script>
-  function showPage(page, btn) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('page-' + page).classList.add('active');
-    btn.classList.add('active');
-  }
-
-  function copyText() {
-    const text = `SANJEEV KALIA
-Business Transformation · Digital Strategy · AI Product Builder · P&L Leadership · C-Suite Executive
-skaliaomen@outlook.com | +91 98114 20446 | Faridabad, Haryana, India
-linkedin.com/in/sanjivkalia | credly.com/users/sanjeevkalia
-
-AI PRODUCTS BUILT:
-- HRMS AI Agent (Anthropic Claude + CrewAI)
-- Booklinq — AI-powered Global Hotel Booking Platform (Launch-Ready)
-
-KEY METRICS: 30+ Years Leadership | Rs 8B+ Revenue | $2.4M 2026 Pipeline | 150+ Brands | 600+ Mentored | 2 AI Products Built
-
-EXECUTIVE SUMMARY
-Results-driven C-suite executive and AI product builder with 30 years of leadership across media, SaaS, digital transformation, and startups. Generated Rs 8B+ in revenue. Yahoo! India founding team (1998). Building HRMS AI Agent and Booklinq with Anthropic Claude + CrewAI.
-
-EXPERIENCE
-
-CMO & Chief Growth Officer | Innobles · Axia Health Services | Jan 2024–Present
-- Sales: Rs 10 Cr ($1.2M) to Rs 16 Cr ($1.93M) in 12 months (+60% YoY)
-- Built Rs 20 Cr ($2.4M) qualified pipeline for 2026
-- Managed Rs 1.5 Cr ($180K) marketing budget; 8x ROI (up from 3x)
-- Market entry: UAE, USA, Canada, South Africa
-- Led 20-person team; +35% delivery velocity via OKRs
-AI Products: HRMS Agent (HR automation) + Booklinq (global hotel AI, launch-ready) — Anthropic Claude + CrewAI
-
-CEO | InsideSport.in · Better Collective (NASDAQ: BECO) | Jan–Dec 2023
-- Traffic: 10M to 16M monthly visitors (+60%) in 12 months
-- Revenue: Rs 4 Cr ($481K) to Rs 8 Cr ($963K) — doubled in 12 months
-- Bounce rate -30pts; session time +15x in 60 days
-- AdSense CPMs +40x; SSP revenues +50x via Ad Exchange
-- High-performer attrition -40% in 12 months
-
-CMO & Startup Mentor | UIncept Accelerator · JIMS | Feb 2020–Nov 2022
-- Top 50 Global Accelerator ranking achieved
-- 90+ EdTech startups mentored; 12 companies raised Series B/C
-- JIMS: +25% application volumes via brand repositioning
-
-Founder, CEO & CSO | OYE Group | Nov 2010–Jan 2020
-- Rs 8 Crore (~$963K) peak annual revenue built from zero
-- 80-person team; 90+ client accounts; 100+ large-scale events
-- CPA reduced ~30% via proprietary SEO/content framework
-- India's Leading Digital & Creative Boutique Agency award
-
-President – Sales & Marketing | BAG Films (News24, E24, 10FM) | 2007–2010
-- Rs 600M cumulative revenue; News24: 9th to 5th in Hindi News in 15 months
-
-Regional Head AVP | Times Group · Zoom TV | 2004–2007
-- 4x revenue in 6 months; 50% national revenue from North & East
-
-Head Sales & Content | Sony TV · HBO · AXN | 2002–2004
-- Rs 750M AXN ad sales; HBO India record Rs 1,500M revenue FY03-04 (4x prior rates)
-
-Branch Head & GM | Yahoo! India | 1998–2002
-- 5x regional revenue growth over 4 years
-- Among India's first SEM/programmatic practitioners
-- Accounts: Pepsi, HP, MasterCard, Pernod Ricard
-
-Sales Manager | Nimbus Communications | 1995–1998
-- $114M North India sponsorship sales, ICC World Cup 1996
-- $200M cumulative revenue; network +45%; market share +25%
-
-EDUCATION
-MBA (PGDBA) – Symbiosis University Pune, 2004
-Certified Digital Content Marketing Strategist – Digital Marketer Austin TX, 2016
-B.Com – Delhi University, 1995
-
-CERTIFICATIONS: Google Analytics IQ | AdWords Search | Adobe ACA | Display & Video 360 | Search Ads 360 | AI Product Management`;
-
-    navigator.clipboard.writeText(text).then(() => {
-      const btn = document.querySelector('.copy-btn');
-      btn.textContent = '✓ Copied!';
-      setTimeout(() => { btn.textContent = '⬇ Copy Plain Text'; }, 2500);
-    }).catch(() => {
-      alert('Copy failed. Please use Ctrl+A to select all and copy manually.');
-    });
-  }
+// Neural Network Background
+(function(){var c=document.getElementById('neural-canvas'),x=c.getContext('2d'),ps=[];function r(){c.width=window.innerWidth;c.height=window.innerHeight}window.addEventListener('resize',r);r();function P(){this.x=Math.random()*c.width;this.y=Math.random()*c.height;this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;this.r=Math.random()*2+1}P.prototype.update=function(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>c.width)this.vx*=-1;if(this.y<0||this.y>c.height)this.vy*=-1};P.prototype.draw=function(){x.beginPath();x.arc(this.x,this.y,this.r,0,Math.PI*2);x.fillStyle='rgba(108,92,231,0.25)';x.fill()};function init(){var n=Math.min(Math.floor((c.width*c.height)/18000),80);ps=[];for(var i=0;i<n;i++)ps.push(new P())}function conn(){for(var i=0;i<ps.length;i++)for(var j=i+1;j<ps.length;j++){var dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){x.beginPath();x.strokeStyle='rgba(108,92,231,'+(0.08*(1-d/150))+')';x.lineWidth=.8;x.moveTo(ps[i].x,ps[i].y);x.lineTo(ps[j].x,ps[j].y);x.stroke()}}}function anim(){x.clearRect(0,0,c.width,c.height);ps.forEach(function(p){p.update();p.draw()});conn();requestAnimationFrame(anim)}init();anim();window.addEventListener('resize',init)})();
+// Scroll Reveal
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(function(el){o.observe(el)})})();
+// Animated Counters
+(function(){var cs=document.querySelectorAll('.counter-value'),done=false;var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting&&!done){done=true;cs.forEach(function(c){var t=parseInt(c.getAttribute('data-target')),sf=c.getAttribute('data-suffix')||'',pf=c.getAttribute('data-prefix')||'$',dur=2000,st=performance.now();function u(ct){var el=ct-st,pr=Math.min(el/dur,1),ea=1-Math.pow(1-pr,3),cv=Math.floor(ea*t);c.textContent=pf+cv+sf;if(pr<1)requestAnimationFrame(u)}requestAnimationFrame(u)})}})},{threshold:.3});var mg=document.querySelector('.metrics-grid');if(mg)o.observe(mg)})();
+// Proficiency Bars
+(function(){var bs=document.querySelectorAll('.proficiency-bar-fill');var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){var b=en.target;var w=b.getAttribute('data-width');setTimeout(function(){b.style.width=w+'%'},200);o.unobserve(b)}})},{threshold:.3});bs.forEach(function(b){o.observe(b)})})();
+// Copy Text
+function copyText(){var t="SANJEEV KALIA\nChief Growth Officer \u00b7 Enterprise Intelligence \u00b7 AI-Powered Revenue Acceleration\nskaliaomen@outlook.com | +91 98114 20446 | Delhi NCR, India\nlinkedin.com/in/sanjivkalia\n\nEXECUTIVE PROFILE\nResults-driven Chief Growth Officer and Enterprise Intelligence Architect with 30+ years of engineering revenue acceleration engines across SaaS, digital platforms, and enterprise AI.\n\nCORE COMPETENCIES\n\u2022 AI & Intelligent Automation: OpenAI/GPT APIs, LLM Integration, IPA, Predictive Analytics, AI Agent Orchestration\n\u2022 MarTech & Growth: Full-Funnel GTM, Revenue Operations, ABM, Marketing Automation, CDPs\n\u2022 AdTech & Programmatic: DV360/GAM, SSP/DSP, Header Bidding, Yield Optimization, RTB\n\u2022 Enterprise Strategy: P&L Ownership, M&A Advisory, Investor Relations, Global Expansion\n\u2022 Data & Analytics: GA4, Adobe Analytics, Looker Studio, Attribution Modeling, CRO\n\u2022 Digital Transformation: Cloud ERP, SaaS Strategy, UI/UX, SEO/SEM, Web 3.0\n\nPROFESSIONAL EXPERIENCE\n\nCMO & CGO | INNOBLES | Jan 2024 \u2013 Present\n- Reduced CAC by 32%, accelerated B2B pipeline velocity by 45%\n- 40%+ operational efficiency via IPA. ROI from 3x to 8x.\n\nCEO | INSIDE SPORT .IN | Jan 2023 \u2013 Dec 2023\n- 5x viewership. 40% revenue growth Q1. CPMs 40x, SSP 50x.\n\nCMO & Mentor | JIMS / UINCEPT | Nov 2010 \u2013 Jan 2020\n- Top 50 Global ranking. 90+ startups mentored.\n\nCEO & CSO | OYE GROUP | Nov 2010 \u2013 Jan 2020\n- 80-member team. 5x+ client ROI. 100+ events.\n\nPresident Sales | BAG FILMS | 2007 \u2013 2010\n- $12M USD revenue. News24 #5 position.\n\nHead Sales | SONY TV (HBO, AXN) | 2002 \u2013 2004\n- $27M USD ad sales.\n\nBranch Head | YAHOO! INDIA | 1998 \u2013 2002\n- 5x regional sales growth.\n\nRSM | NIMBUS COMMUNICATIONS | 1995 \u2013 1998\n- $114M USD (ICC World Cup). $200M cumulative revenue.\n\nEDUCATION\nPGDBA - SIBM Pune (2004) | B.Com - Delhi University (1995)\n\nCERTIFICATIONS\nDigital Content Marketing | Google Analytics IQ | AdWords | Adobe Certified | DV360 | SA360";navigator.clipboard.writeText(t).then(function(){var b=document.querySelector('.btn-primary'),oh=b.innerHTML;b.innerHTML='<svg style="width:14px;height:14px;vertical-align:-2px;margin-right:6px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Copied!';setTimeout(function(){b.innerHTML=oh},2500)}).catch(function(){alert('Copy failed.')})}
 </script>
-
 </body>
 </html>
